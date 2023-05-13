@@ -1,0 +1,1459 @@
+@charset "utf-8";
+
+/* banner */
+.banner{
+    position: relative;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    padding: 50px 160px;
+
+}
+.header-ul-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.header-left{
+    display: flex;
+    align-items: center;
+}
+.left-logo{
+    margin-right: 40px;
+}
+.left-logo a{
+    display: block;
+    width: 160px;
+}
+.header-right{
+    display: flex;
+}
+.header li{
+    padding: 0 20px;
+    color: #f2f2f2;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+.banner-txt{
+    position: absolute;
+    top: 700px;
+    left: 160px;
+    z-index: 999;
+    color: #f2f2f2;
+}
+.banner-txt span{
+    font-size: 5.5rem;
+}
+.banner-txt p{
+    font-size: 2.5rem;
+}
+.header-bottom{
+    display: none;
+}
+.header-bottom-txt{
+    display: none;
+    color: #f2f2f2;
+}
+.mySwiper{
+    height: 100vh;
+}
+/* 스와이퍼 버튼 가리기 */
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    opacity: 0;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    opacity: 0;
+}
+.center-logo-btn{
+    width: 25px;
+    display: none;
+}
+/* sec-1 */
+
+.container{
+    /* 공통컨테이너 */
+    height: 100vh;
+}
+.sec-1 .container{
+    height: auto;
+}
+
+input[id='view-more']{
+    display: none;
+}
+.sec-1-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 140px 0 100px 0;
+    font-size: 2rem;
+}
+.item-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 180px;
+}
+.item-box-first{
+    padding: 80px 0;
+}
+.item-box.thd{
+    padding-bottom:300px;
+}
+.item{
+    width: 250px;
+    overflow: hidden;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.item-img-box{
+    width: 250px;
+    height: 250px;
+}
+.item-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.price-box{
+    padding-top: 30px;
+}
+.price{
+    padding-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.view-more-btn-box{
+    width: 40px;
+    padding-top: 10px;
+}
+input[id="view-more"],
+.item-box-closed{
+    display: none;
+}
+
+label[for="view-more"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 100px;
+}
+
+input[id="view-more"]:checked ~ .item-box-wrap .item-box-closed {
+    display: block;
+}
+
+input[id="view-more"]:checked ~ .item-box-wrap label[for="view-more"] .view-more-btn-box{
+    transform: translateY(1300px) rotate(180deg);
+}
+.shop-now{
+    display: none;
+}
+
+/* sec-2 */
+.sec-2-top-title{
+    font-size: 1.875rem;
+    padding-bottom: 20px;
+}
+.sec-2-top-txt{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.sec-2-top-left .img-box,
+.sec-2-top-right .img-box,
+.sec-2-bottom-left .img-box,
+.sec-2-bottom-right .img-box{
+    height: 350px;
+}
+.sec-2-top-left,
+.sec-2-top-right,
+.sec-2-bottom-left,
+.sec-2-bottom-right{
+    width: calc(50% - 160px);
+}
+.sec-2-top{
+    display: flex;
+    justify-content: center;
+}
+.sec-2-bottom{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.sec-2-top-left{
+    margin-right: 20px;
+}
+.sec-2-bottom-left{
+    margin-right: 20px;
+}
+.sec-2-top-right{
+    position: relative;
+}
+.sec-2-top-right .in-txt{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: #f2f2f2;
+    font-size: 2.5rem;
+    transition: .3s;
+}
+
+.sec-2-bottom-left{
+    position: relative;
+}
+.sec-2-bottom-left .in-txt{
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    color: #f2f2f2;
+    font-size: 2.5rem;
+    transition: .3s;
+    text-shadow: 1px 1px 6px #02030b82;
+
+}
+.sec-2-bottom-right{
+    position: relative;
+}
+.sec-2-bottom-right .in-txt{
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    color: #f2f2f2;
+    font-size: 2.5rem;
+    transition: .3s;
+}
+
+.sec-2-top-right:hover .in-txt,
+.sec-2-bottom-left:hover .in-txt,
+.sec-2-bottom-right:hover .in-txt{
+    color: orangered;
+}
+/* sec-2 하단 쿠폰배너 */
+.sec-2-cuppon-banner{
+    position: relative;
+    width: calc(100% - 300px);
+    margin: 0 auto;
+}
+.cuppon-txt-wrap{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #f2f2f2;
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-end;
+}
+.cuppon-txt-wrap span{
+    font-size: 1.5rem;
+}
+.cuppon-txt-wrap p{
+    font-size: 0.85rem;
+    padding-top: 5px;
+}
+.cuppon-banner-go-btn{
+    transition: .3s;
+}
+.cuppon-banner-go-btn:hover{
+    color: orangered;
+}
+
+/* sec-3 */
+
+.sec-3-title{
+    font-size: 4rem;
+    padding-bottom: 40px;
+    padding-top: 70px;
+    padding-left: 90px;
+}
+.horizontal-wrap{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 50px;
+    padding-left: 100px;
+
+}
+.sec-3 .title{
+    /* 세가지 내용들의 각기 타이틀들 */
+    font-size: 2.3rem;
+}
+
+.samsung{
+    display: flex;
+    padding-right: 200px;
+}
+.samsung-img-box{
+    width: 400px;
+    height: 500px;
+}
+
+.samsung-txt-wrap{
+    padding-left: 40px;
+}
+
+.sec-3 .txt-detail{
+    line-height: 30px;
+    padding-top: 30px;
+}
+.location p{
+    font-size: 6rem;
+    line-height: 120px;
+    -webkit-text-stroke: 1px #dddd;
+    color: transparent;
+}
+.samsung .txt-detail{
+    width: 500px;
+}
+.art-work{
+    display: flex;
+}
+.art-work-img-box{
+    width: 400px;
+    height: 500px;
+}
+.art-work-txt-wrap{
+    text-align: end;
+    padding-right: 40px;
+}
+.art-work .txt-detail{
+    width: 600px;
+}
+
+.collabo p{
+    font-size: 3.6rem;
+    -webkit-text-stroke: 1px #dddd;
+    color: transparent;
+    line-height: 100px;
+    padding-top: 30px;
+}
+.jeju{
+    display: flex;
+}
+.jeju-img-box{
+    width: 400px;
+    height: 500px;
+}
+.jeju-sec-img-box{
+    width: 500px;
+    height: 200px;
+}
+.jeju-right{
+    padding-left: 20px;
+}
+.jeju-txt-wrap{
+    padding-top: 40px;
+}
+.jeju .txt-detail{
+    width: 510px;
+}
+
+/* sec-4 */
+.sec-4 .container{
+    padding-top: 40px;
+
+}
+.sec-4-head-txt-wrap{
+    padding-bottom: 40px;
+    margin-left: 160px;
+}
+.sec-4-top{
+    display: flex;
+    justify-content: center;
+}
+.sec-4-top-left{
+    position: relative;
+    cursor: pointer;
+    width: calc(60% - 160px);
+    margin-right: 50px;
+}
+.sec-4-top-left-txt-wrap{
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+    text-shadow: 1px 1px 10px #02030B;
+}
+.sec-4-top-left-txt-wrap span{
+    font-size: 3rem;
+    color: #f2f2f2;
+}
+.sec-4-top-left-txt-wrap p{
+    color: #f2f2f2;
+    padding-top: 10px;
+}
+.sec-4-top-left-img-box{
+    height: 460px;
+}
+.sec-4-top-right{
+    width: calc(30% - 20px);
+}
+.sec-4-top-right-img-box{
+    height: 460px;
+}
+.sec-4-bottom{
+    width: calc(100% - 320px);
+    margin: 0 auto;
+}
+.sec-4-bottom-img-box{
+    height: 280px;
+    padding-top: 20px;
+}
+
+.sec-4-head-txt{
+    font-size: 2.5rem;
+}
+
+/* sec-5 */
+.sec-5 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.sec-5-insta-link{
+    margin-top: 108px;
+    text-align: center;
+    font-size: 1.25rem;
+    transition: .3s;
+}
+.sec-5-insta-link:hover{
+    color: orangered;
+}
+.secSwiper{
+    width: calc(100% - 320px);
+}
+.sec-5-slide-txt-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #f2f2f2;
+    text-align: center;
+}
+.sec-5-slide-txt-wrap span{
+    font-size: 3.125rem;
+}
+.sec-5-slide-txt-wrap p{
+    font-size: 1.25rem;
+}
+
+/* footer */
+.footer{
+    background-color: #02030B;
+    color: #f2f2f2;
+}
+.footer .container{
+    height: auto;
+    padding: 100px 0;
+}
+.footer li{
+    font-size: 0.9rem;
+}
+.footer-ul-wrap{
+    display: flex;
+    justify-content: space-around;
+}
+ul.home li{
+    padding-top: 20px;
+}
+ul.group{
+    display: flex;
+}
+ul.group li{
+    padding-right: 20px;
+    width: 160px;
+}
+ul.people p{
+    padding-bottom: 30px;
+}
+li.people-group{
+    padding-top: 20px;
+}
+ul.contact li{
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+}
+
+/* 반응형 시작 */
+@media (max-width:1600px) {
+    /* banner */
+    .header{
+        padding: 50px 120px;
+    }
+    .banner-txt {
+        position: absolute;
+        top:  700px;
+        left: 140px;
+        z-index: 999;
+        color: #f2f2f2;
+    }
+    /* sec-1 */
+    .item{
+        width: 200px;
+    }
+    .item-img-box{
+        width: 200px;
+        height: 200px;
+    }
+    input[id="view-more"]:checked ~ .item-box-wrap label[for="view-more"] .view-more-btn-box {
+        transform: translateY(1200px) rotate(180deg);
+    }
+
+    /* sec-3 */
+    .sec-3 .title {
+        font-size: 2rem;
+    }
+    .samsung-img-box,
+    .art-work-img-box,
+    .jeju-img-box{
+        width: 300px;
+        height: 400px;
+    }
+    .location p {
+        font-size: 5rem;
+        line-height: 100px;
+    }
+    .collabo p {
+        font-size: 3rem;
+        line-height: 70px;
+    }
+    .jeju-sec-img-box {
+        width: 500px;
+        height: 130px;
+    }
+
+    /* sec-4 */
+    .sec-4-bottom{
+        width: calc(100% - 290px);
+    }
+    .sec-4-head-txt-wrap {
+        margin-left: 140px;
+    }
+    /* sec-5 */
+    .secSwiper{
+        width: calc(100% - 250px);
+    }
+    .sec-5-slide-txt-wrap span {
+        font-size: 3rem;
+    }
+    .sec-5-slide-txt-wrap p {
+        font-size: 1.1rem;
+    }
+    /* footer */
+    ul.home li:first-child {
+        padding-top: 0px;
+    }
+}
+@media (max-width:1440px) {
+    .header{
+        padding: 50px 70px;
+    }
+    .banner-txt {
+        top: 720px;
+        left: 120px;
+    }
+    .banner-txt span{
+        font-size: 5rem;
+    }
+    .banner-txt p{
+        font-size: 1.8rem;
+    }
+    /* sec-1 */
+    .sec-1-title {
+        padding: 140px 0 130px 0;
+    }
+    .item-img-box {
+        width: 180px;
+        height: 180px;
+    }
+    .item{
+        width: 180px;
+    }
+    .item-name{
+        font-size: 0.9rem;
+    }
+
+    /* sec-2 */
+    .sec-2-top-left, .sec-2-top-right, .sec-2-bottom-left, .sec-2-bottom-right{
+        width: calc(50% - 120px);
+    }
+    .sec-2-top-txt{
+        word-break: keep-all;
+    }
+    .cuppon-txt-wrap span {
+        font-size: 1.2rem;
+    }
+    .cuppon-txt-wrap p {
+        font-size: 0.8rem;
+        padding-top: 5px;
+        font-weight: 500;
+    }
+    .sec-2 .in-txt{
+        font-size: 2rem;
+    }
+    .sec-2-top-txt {
+        font-size: 0.871rem;
+        line-height: 30px;
+    }
+    .sec-2-cuppon-banner{
+        width: calc(100% - 220px);
+    }
+    /* sec-3 */
+    .sec-3-title {
+        font-size: 3rem;
+        padding-left: 100px;
+    }
+    .location p {
+        font-size: 4rem;
+        line-height: 80px;
+    }
+
+    /* sec-4 */
+    .sec-4-bottom {
+        width: calc(100% - 270px);
+    }
+
+    /* sec-5 */
+    .secSwiper{
+        width: calc(100% - 310px);
+    }
+    .sec-5-slide-txt-wrap span{
+        font-size: 2.8rem;
+    }
+    .sec-5-slide-txt-wrap p{
+        font-size: 1rem;
+    }
+    /* footer */
+    ul.home li:first-child {
+        padding-top: 10px;
+    }
+}
+@media(max-width:1340px){
+
+    /* banner */
+    .header li{
+        padding: 0 15px;
+    }
+    .left-logo a{
+        width: 140px;
+    }
+    .banner-txt span{
+        font-size: 4.5rem;
+    }
+    /* sec-2 */
+
+    .sec-2-top-left, .sec-2-top-right, .sec-2-bottom-left, .sec-2-bottom-right {
+        width: calc(50% - 100px);
+    }
+    .sec-2-cuppon-banner{
+        width: calc(100% - 180px);
+    }
+    .cuppon-txt-wrap p {
+        font-size: 0.7rem;
+    }
+    /* sec-3 */
+    .location p{
+        font-size: 3.5rem;
+    }
+    /* sec-4 */
+    .sec-4-top-left {
+        position: relative;
+        cursor: pointer;
+        width: calc(60% - 80px);
+        margin-right: 50px;
+    }
+    .sec-4-bottom {
+        width: calc(100% - 180px);
+    }
+    .sec-4-head-txt-wrap {
+        margin-left: 90px;
+    }
+    .sec-4-top-left-txt-wrap span {
+        font-size: 2.5rem;
+    }
+    .sec-4-top-left-txt-wrap p {
+        font-size: 0.9rem;
+    }
+    /* sec-5 */
+    .secSwiper {
+        width: calc(100% - 200px);
+    }
+}
+@media (max-width:1230px) {
+    /* banner */
+    .header{
+        padding: 50px 30px;
+    }
+    .item-img-box {
+        width: 150px;
+        height: 150px;
+    }
+    .item {
+        width: 160px;
+    }
+    .item-name{
+        font-size: 0.85rem;
+    }
+    /* sec-1 */
+    .sec-1-title {
+        padding: 180px 0 130px 0;
+    }
+    /* sec-3 */
+    .samsung {
+        display: flex;
+        padding-right: 70px;
+    }
+    /* sec-4 */
+    .sec-4-bottom {
+        width: calc(100% - 170px);
+    }
+    /* sec-5 */
+    .secSwiper {
+        width: calc(100% - 180px);
+    }
+}
+@media (max-width:1150px) {
+    /* banner */
+
+    .left-logo{
+        margin-right: 0;
+        padding-bottom: 40px;
+    }
+    .header{
+        position: fixed;
+        width: 50vw;
+        height: 100vh;
+        background-color: #02030B;
+        transform: translateX(-100%);
+        transition: .3s;
+    }
+    .header.active{
+        transform: translateX(0);
+    }
+    .header-ul-wrap{
+        display: block;
+        padding-left: 20px;
+    }
+    .header-left{
+        display: block;
+    }
+    .header-right{
+        display: block;
+        padding-top: 20px;
+    }
+    .header li{
+        padding: 0;
+        margin-top: 20px;
+    }
+    .header-left li{
+        font-size: 1.8rem;
+        transition: .3s;
+    }
+    .header-left li:hover{
+        color: orangered;
+    }
+    .header-right li{
+        font-size: 0.9rem;
+    }
+    .header-bottom{
+        display: flex;
+        padding-top: 30px;
+    }
+    .header-bottom .box{
+        display: block;
+        width: 35px;
+        height: 35px;
+        margin-right: 20px;
+    }
+    .header-bottom-txt{
+        display: block;
+        font-size: 0.8rem;
+        padding-top: 20px;
+    }
+    .center-logo-btn{
+        display: block;
+    }
+    .logo-btn-box{
+        position: fixed;
+        left: 100%;
+        background-color: #02030B;
+        padding: 10px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .logo-btn-box p{
+        color: #f2f2f2;
+        font-size: 1.3rem;
+    }
+
+    /* sec-1  */
+    .sec-1 .container{
+        overflow: hidden;
+    }
+    .sec-1-title{
+        padding: 150px 0;
+    }
+    .shop-now{
+        display: inline-block;
+        font-size: 2rem;
+        margin-left: 450px;
+        padding: 150px 0;
+        color: #8C8577;
+        transition: .3s;
+    }
+    .shop-now:hover{
+        color: #02030B;
+    }
+    input[id="view-more"]:checked ~ .item-box-wrap .item-box-closed {
+        display: none;
+    }
+    #view-more-label{
+        display: none;
+    }
+    .item-box.first{
+        display: block;
+    }
+    .item{
+        width: calc(50% - 40px);
+        float: left;
+        margin-right: 0;
+        margin: 20px;
+    }
+    .item-img-box{
+        width: 100%;
+        height: 100%;
+    }
+    .item-box{
+        padding: 0;
+    }
+    .item-name{
+        font-size: 1rem;
+    }
+    .price{
+        font-size: 1rem;
+    }
+
+    /* sec-2 */
+    .sec-2 .container{
+        height: auto;
+    }
+    .sec-2-top{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec-2-top-left,
+    .sec-2-top-right{
+        width: calc(100% - 40px);
+        margin-right: 0;
+    }
+    .sec-2-top-left{
+        padding-bottom: 50px;
+    }
+    .sec-2-top-txt{
+        font-size: 0.9rem;
+    }
+    .sec-2-bottom-left,
+    .sec-2-bottom-right{
+        width: calc(50% - 30px);
+    }
+    .sec-2-cuppon-banner {
+        width: calc(100% - 40px);
+    }
+
+    /* sec-3 */
+    .sec-3 .container{
+        height: auto;
+    }
+    .horizontal-wrap{
+        display: block;
+        padding-top: 120px;
+
+    }
+    .horizontal-box{
+        padding-bottom: 200px;
+    }
+    /* sec-4 */
+    .sec-4-bottom {
+        width: calc(100% - 160px);
+    }
+    /* sec-5 */
+    .secSwiper {
+        width: calc(100% - 170px);
+    }
+}
+@media (max-width:1060px) {
+
+    /* sec-2 */
+    .cuppon-txt-wrap{
+        justify-content: space-evenly;
+    }
+    .cuppon-txt-wrap span{
+        font-size: 1.5rem;
+    }
+    .cuppon-txt-wrap p {
+        display: none;
+    }
+    /* sec-3 */
+    .horizontal-wrap{
+        padding-left: 50px;
+    }
+    .samsung-img-box, .art-work-img-box, .jeju-img-box {
+        width: 250px;
+        height: 360px;
+    }
+    .location p {
+        font-size: 3rem;
+        line-height: 60px;
+    }
+    .collabo p {
+        font-size: 2.8rem;
+        line-height: 70px; 
+    }
+    .sec-3 .txt-detail {
+        line-height: 30px;
+        padding-top: 10px;
+    }
+    /* sec-4 */
+    .sec-4-top-left {
+        width: calc(60% - 20px);
+    }
+    .sec-4-bottom {
+        width: calc(100% - 90px);
+    }
+    .sec-4-head-txt-wrap {
+        margin-left: 50px;
+    }
+    /* sec-5 */
+    .secSwiper {
+        width: calc(100% - 90px);
+    }
+    /* footer */
+    .footer-ul-wrap {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    ul.home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 80px;
+    }
+    ul.home li:first-child {
+        padding-top: 0;
+    }
+    ul.home li {
+        padding-top: 0;
+        margin: 0 50px;
+    }
+    ul.group li {
+        padding-right: 20px;
+    }
+    ul.people{
+        padding-bottom: 40px;
+        margin-left: 80px;
+
+    }
+    ul.contact{
+        padding-top: 40px;
+        width: 400px;
+    }
+}
+@media (max-width:980px) {
+    .banner-txt{
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        text-shadow: 1px 1px 5px #4c4c4c80;
+    }
+    .banner-txt span{
+        font-size: 3.3rem;
+    }
+    .banner-txt p{
+        font-size: 1.1rem;
+    }
+    /* sec-1 */
+    .shop-now {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-left: 400px;
+        padding: 150px 0;
+        color: #8C8577;
+        transition: .3s;
+    }
+    /* sec-2 */
+    .sec-2-top-right,
+    .sec-2-bottom-left,
+    .sec-2-bottom-right{
+    pointer-events: none;
+    }
+    .sec-2 .in-txt {
+        font-size: 1.7rem;
+    }
+    .cuppon-banner-go-btn{
+        pointer-events: none;
+        font-size: 0.9rem;
+    }
+    .cuppon-txt-wrap span {
+        font-size: 1.2rem;
+    }
+    /* sec-3 */
+    .sec-3-title {
+        font-size: 2.7rem;
+        padding-left: 50px;
+    }
+    .sec-3 .txt-detail{
+        font-size: 0.95rem;
+        width: auto;
+    }
+
+    /* sec-5 */
+    .sec-5-slide-txt-wrap span {
+        font-size: 2rem;
+    }
+    .sec-5-slide-txt-wrap p {
+        font-size: 0.9rem;
+    }
+    .sec-5-insta-link{
+        pointer-events: none;
+    }
+}
+@media (max-width:840px) {
+    /* banner */
+    .banner-txt span {
+        font-size: 2.8rem;
+    }
+    /* sec-1 */
+    .shop-now {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-left: 310px;
+        padding: 150px 0;
+        color: #8C8577;
+        transition: .3s;
+        pointer-events: none;
+    }
+    /* sec-2 */
+    .top-left-txt-wrap{
+        text-align: center;
+    }
+    .cuppon-img-box{
+        height: 70px;
+    }
+    /* sec-3 */
+    .sec-3-title{
+        padding-left: 0;
+        text-align: center;
+    }
+    .horizontal-wrap{
+        padding-left: 0;
+    }
+    .samsung{
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+    .samsung-txt-wrap {
+        text-align: center;
+        padding-top: 50px;
+    }
+    .location{
+        display: none;
+    }
+    .art-work{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .art-work-txt-wrap{
+        padding-right: 0;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .collabo{
+        display: none;
+    }
+    .jeju{
+        flex-direction: column;
+    }
+    .jeju-img-box{
+        margin: 0 auto;
+    }
+    .jeju-sec-img-box{
+        display: none;
+    }
+    .jeju-right{
+        padding: 0;
+        text-align: center;
+    }
+    .samsung-img-box, .art-work-img-box, .jeju-img-box {
+        width: calc(100% - 40px);
+        height: 360px;
+    }
+    /* sec-4 */
+    .sec-4-head-txt-wrap {
+        margin-left: 0;
+        text-align: center;
+    }
+    .sec-4-top{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .sec-4-top-left{
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+    .sec-4-top-right{
+        display: none;
+    }
+    .sec-4-bottom{
+        width: calc(100% - 40px);
+    }
+    /* sec-5 */
+    .secSwiper {
+        width: calc(100% - 40px);
+    }
+}
+@media (max-width:720px){
+    /* banner */
+    .banner-txt span {
+        font-size: 2.3rem;
+    }
+    .banner-txt p {
+        font-size: 1rem;
+    }
+    /* 서브메뉴 */
+    .header-left li {
+        font-size: 1.3rem;
+        pointer-events: none;
+    }
+    .header-right li {
+        font-size: 0.8rem;
+    }
+    .header-bottom .box {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+    .header-bottom-txt {
+        display: block;
+        font-size: 0.6rem;
+        padding-top: 20px;
+    }
+    /* sec-1 */
+    .item-name{
+        font-size: 0.9rem;
+    }
+    .shop-now {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-left: 260px;
+        padding: 150px 0;
+        color: #8C8577;
+        transition: .3s;
+        pointer-events: none;
+    }
+    /* sec-2 */
+    .sec-2 .in-txt {
+        font-size: 1.5rem;
+    }
+    .sec-2-bottom .in-txt{
+        bottom: 20px;
+        font-size: 1.3rem;
+    }
+    .cuppon-txt-wrap span {
+        font-size: 1.1rem;
+    }
+    /* sec-3 */
+    .sec-3 .txt-detail p{
+        padding-top: 20px;
+    }
+    /* sec-4 */
+    .sec-4-top-left-txt-wrap {
+        position: absolute;
+        bottom: 40px;
+        left: 50px;
+        text-shadow: 1px 1px 10px #303032;
+    }
+    /* sec-5 */
+    .sec-5-slide-txt-wrap span {
+        font-size: 1.8rem;
+    }
+    .sec-5-slide-txt-wrap p {
+        font-size: 0.85rem;
+    }
+}
+@media (max-width:590px) {
+    /* banner */
+    .header-ul-wrap {
+        display: block;
+        padding-left: 0;
+    }
+    .banner-txt span {
+        font-size: 1.9rem;
+    }
+    .banner-txt p {
+        font-size: 1rem;
+        padding-top: 10px;
+    }
+    /* sec-1 */
+    .item-name {
+        font-size: 0.85rem;
+    }
+    .shop-now {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-left: 210px;
+        padding: 150px 0;
+        color: #8C8577;
+        transition: .3s;
+        pointer-events: none;
+    }
+    /* sec-2 */
+    .sec-2-top-txt {
+        word-break: keep-all;
+    }
+    /* sec-3 */
+    .sec-3-title {
+        font-size: 2.3rem;
+        padding-top: 150px;
+    }
+    .horizontal-wrap{
+        padding-top: 50px;
+    }
+    .sec-3 .title {
+        font-size: 1.8rem;
+    }
+    /* sec-4 */
+    .sec-4-top-left-txt-wrap span {
+        font-size: 2.2rem;
+    }
+    .sec-4-top-left-txt-wrap p {
+        font-size: 0.85rem;
+    }
+    /* sec-5 */
+    .sec-5-insta-link {
+        margin-top: 150px;
+        text-align: center;
+        font-size: 1.25rem;
+        transition: .3s;
+    }
+}
+@media (max-width:500px) {
+    /* banner */
+    .left-logo a {
+        width: 110px;
+    }
+    .header-left li {
+        font-size: 1rem;
+        pointer-events: none;
+    }
+    .logo-btn-box {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 7px;
+    }
+    .logo-btn-box p{
+        font-size: 1.1rem;
+        margin-left: 2px;
+
+    }
+    /* sec-1 */
+    .sec-1-title{
+        font-size: 1.7rem;
+        padding: 100px 0;
+    }
+    .shop-now {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-left: 180px;
+        padding: 130px 0;
+        color: #8C8577;
+        transition: .3s;
+        pointer-events: none;
+    }
+
+    /* sec-2 */
+    .sec-2-top-title {
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
+    .cuppon-txt-wrap span {
+        font-size: 1rem;
+    }
+    .cuppon-banner-go-btn{
+        font-size: 0.8rem;
+    }
+    .sec-2-bottom .in-txt{
+        font-size: 1.15rem;
+    }
+
+    /* sec-3 */
+    .sec-3-title {
+        font-size: 2.1rem;
+        padding-top: 150px;
+    }
+    .samsung-txt-wrap {
+        padding-left: 0;
+    }
+    /* sec-4 */
+    .sec-4-top-left-txt-wrap span {
+        font-size: 2rem;
+    }
+    /* sec-5 */
+    .sec-5-slide-txt-wrap span {
+        font-size: 1.7rem;
+    }
+    /* footer */
+    .footer li{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:375px) {
+    /* banner */
+    .header-bottom .box {
+        display: block;
+        width: 25px;
+        height: 25px;
+        margin-right: 20px;
+    }
+    .left-logo{
+        padding-bottom: 10px;
+    }
+    .left-logo a {
+        width: 80px;
+    }
+    .banner-txt span {
+        font-size:2rem;
+    }
+    .banner-txt p {
+        font-size: 0.9rem;
+    }
+    .header-left li{
+        font-size: 0.7rem;
+    }
+    .header-right li {
+        font-size: 0.7rem;
+    }
+    .center-logo-btn {
+        width: 20px;
+    }
+    .banner-txt{
+        width: 300px;
+    }
+    .logo-btn-box {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 5px;
+    }
+    .logo-btn-box p{
+        font-size: 1rem;
+    }
+
+    /* sec-1 */
+    .item-name {
+        font-size: 0.8rem;
+    }
+    .price {
+        font-size: 0.8rem;
+    }
+    .shop-now{
+        margin-left: 140px;
+        font-size: 1.2rem;
+    }
+    /* sec-2 */
+    .sec-2-top-right .in-txt {
+        right: 20px;
+        font-size: 1.2rem;
+    }
+    .sec-2-bottom-left .in-txt{
+        right: 10px;
+        font-size: 1rem;
+    }
+    .sec-2-bottom-right .in-txt{
+        right: 10px;
+        font-size: 1rem;
+    }
+    .cuppon-banner-go-btn{
+        display: none;
+    }
+    /* sec-3 */
+    .sec-3-title{
+        font-size: 1.8rem;
+    }
+    .sec-3 .txt-detail {
+        font-size: 0.87rem;
+        width: calc(100% - 32px);
+        margin: 0 auto;
+    }
+    .sec-3 .title{
+        font-size: 1.5rem;
+    }
+    .samsung-img-box, .art-work-img-box, .jeju-img-box {
+        height: 250px;
+    }
+    /* sec-4 */
+    .sec-4-head-txt {
+        font-size: 2rem;
+    }
+    .sec-4-top-left-txt-wrap span {
+        font-size: 1.7rem;
+    }
+    .sec-4-top-left-txt-wrap {
+        position: absolute;
+        bottom: 40px;
+        left: 30px;
+        text-shadow: 1px 1px 10px #303032;
+    }
+    .sec-4-top-left-img-box {
+        height: 250px;
+    }
+    .sec-4-bottom-img-box {
+        height: 150px;
+        padding-top: 20px;
+    }
+    /* sec-5 */
+    .sec-5-slide-txt-wrap span {
+        font-size: 1.2rem;
+    }
+    .sec-5-slide-txt-wrap p {
+        font-size: 0.7rem;
+    }
+    .sec-5-insta-link{
+        font-size: 0.9rem;
+    }
+    /* footer */
+    .footer li{
+        font-size: 0.7rem;
+    }
+    ul.home li {
+        margin: 0 30px;
+    }
+    ul.group li {
+        width: 110px;
+    }
+    ul.people {
+        margin-left: 50px;
+    }
+    ul.contact {
+        padding-top: 40px;
+        width:290px;
+    }
+    
+}
